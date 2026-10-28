@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#123e70"><title>Anamnese | Jéssica Rezende</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section id="login" class="login-screen" hidden>
+  <div class="login-card"><div class="brand-mark">JR</div><p class="eyebrow">REABILITAÇÃO ANIMAL</p><h1>Jéssica Rezende</h1><p id="loginHint">Acesso local ao sistema</p>
+    <form id="loginForm"><label for="password">Senha local</label><input id="password" type="password" autocomplete="current-password" required minlength="6"><button class="primary wide" id="loginButton">Entrar</button></form>
+    <small>Primeiro acesso: crie uma senha com pelo menos 6 caracteres. Guarde-a; não há recuperação automática.</small><p id="loginError" class="error"></p>
+  </div>
+</section>
+<div id="app" hidden>
+  <header class="topbar"><div class="brand"><div class="brand-mark small">JR</div><div><strong>Jéssica Rezende</strong><span>Reabilitação Animal</span></div></div><button id="logout" class="quiet">Sair</button></header>
+  <main class="container">
+    <section id="dashboard">
+      <div class="hero"><div><p class="eyebrow">SISTEMA LOCAL · PROTÓTIPO</p><h1>Anamnese e avaliação<br>fisioterápica veterinária</h1><p>Registros ficam neste navegador e neste dispositivo.</p></div><button id="newRecord" class="primary">＋ Nova anamnese</button></div>
+      <div class="toolbar"><input id="searchRecords" placeholder="Buscar animal ou tutor" aria-label="Buscar"><button id="addTutor" class="secondary">＋ Cadastrar tutor</button><button id="addPet" class="secondary">＋ Cadastrar animal</button></div>
+      <div class="section-title"><div><p class="eyebrow">PRONTUÁRIOS</p><h2>Atendimentos recentes</h2></div><span id="recordCount" class="badge">0 fichas</span></div>
+      <div id="records" class="record-list"></div>
+      <details class="backup"><summary>Cadastros de tutores e animais</summary><div id="peopleManager" class="people-manager"></div></details>
+      <details class="backup"><summary>Backup e restauração</summary><p>O arquivo inclui tutores, animais e fichas, inclusive assinaturas. Guarde-o em local protegido.</p><div class="actions"><button id="exportBackup" class="secondary">Exportar backup</button><label class="secondary file-button">Importar backup<input id="importBackup" type="file" accept="application/json,.json" hidden></label></div><p id="backupMessage" class="hint"></p></details>
+      <p class="security-note">A senha local reduz o acesso casual, mas não criptografa os registros nem substitui a proteção do aparelho. Qualquer pessoa com acesso ao navegador/perfil pode potencialmente ler ou remover os dados.</p>
+    </section>
+    <section id="editor" hidden>
+      <div class="editor-heading"><button id="backHome" class="quiet">← Início</button><div><p class="eyebrow">FICHA DIGITAL</p><h1 id="editorTitle">Nova anamnese</h1></div><button id="printRecord" class="secondary">Gerar PDF</button><button id="saveRecord" class="primary">Salvar ficha</button></div>
+      <div class="progress-wrap"><div id="progressBar"></div></div><div id="sectionNav" class="section-nav"></div>
+      <form id="recordForm"><div id="sectionContent"></div><div class="editor-footer"><button id="prevSection" type="button" class="secondary">← Anterior</button><span id="sectionCount"></span><button id="nextSection" type="button" class="primary">Próxima →</button></div>
+        <div class="signature-box"><div><p class="eyebrow">CONFIRMAÇÃO DO TUTOR</p><h2>Assinatura na tela</h2><p>O tutor declara que as informações prestadas são verdadeiras.</p></div><canvas id="signature" aria-label="Área para desenhar assinatura"></canvas><div class="actions"><button id="clearSignature" type="button" class="quiet">Limpar assinatura</button><span id="sigStatus" class="hint">Assinatura opcional nesta versão</span></div></div>
+      </form><div id="printDocument" hidden></div>
+    </section>
+  </main>
+</div>
+<dialog id="personDialog"><form id="personForm"><div class="dialog-head"><h2 id="personTitle">Cadastro</h2><button type="button" id="closePersonDialog" class="quiet" aria-label="Fechar">✕</button></div><div id="personFields" class="field-grid"></div><div class="actions"><button type="button" id="cancelPersonDialog" class="secondary">Cancelar</button><button id="savePerson" class="primary">Salvar</button></div></form></dialog>
+<div id="toast" role="status" class="toast" hidden></div>
+<script src="app.js"></script>
+</body></html>

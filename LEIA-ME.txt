@@ -1,0 +1,28 @@
+SISTEMA DE ANAMNESE — JÉSSICA REZENDE
+Protótipo local para tablet | HTML, CSS, JavaScript e IndexedDB
+
+ARQUIVO ÚNICO
+Use Anamnese-Jessica-Local.html. Ele já inclui estilo e código; não precisa dos outros arquivos. Copie o arquivo para o notebook/tablet e abra a cópia salva no Chrome ou Edge.
+
+COMO USAR NO WAIO TL10
+1. No gerenciador de arquivos, toque em Anamnese-Jessica-Local.html e escolha Chrome ou Edge. Evite a prévia do gerenciador ou do chat.
+2. Na primeira abertura, crie uma senha local com pelo menos 6 caracteres. Não há recuperação automática.
+3. Cadastre tutores e animais pelos botões da página inicial. Para atualizar um cadastro, abra “Cadastros de tutores e animais” e toque em “Editar tutor” ou “Editar animal”.
+4. Para sair de uma janela de cadastro sem salvar, toque em “Cancelar” ou no X.
+5. No cadastro do animal, use “Foto do animal” para escolher uma imagem ou abrir a câmera. A imagem é reduzida antes de ser salva.
+6. Para uma ficha, toque “Nova anamnese”, percorra as 12 etapas e assine na área pontilhada. Toque em “Salvar ficha”.
+7. Para gerar PDF, use “PDF” em uma ficha salva ou abra a ficha e toque “Gerar PDF”. Na impressão, escolha “Salvar como PDF” ou uma impressora.
+8. Em “Backup e restauração”, exporte cópias com frequência. Os backups incluem fotos e assinaturas. Para restaurar, selecione um backup JSON; a restauração substitui os registros atuais do navegador.
+
+SE NÃO ABRIR OU NÃO SALVAR
+- Confirme que abriu o arquivo salvo no Chrome ou Edge, e não a prévia do chat/gerenciador.
+- O suporte a IndexedDB em arquivos locais varia entre versões do Android e do navegador. Faça um cadastro de teste e reabra o arquivo para confirmar que permaneceu salvo.
+- Se a página abrir mas não guardar dados, anote o navegador e a mensagem que aparece; pode ser necessário empacotar a aplicação de outra forma.
+
+PRIVACIDADE E LIMITAÇÕES
+- Os dados ficam no IndexedDB do perfil do navegador neste dispositivo; o protótipo não os envia para nuvem.
+- A senha é uma barreira simples na interface. Não criptografa registros nem impede que alguém com acesso ao perfil leia ou apague os dados.
+- Dados podem ser apagados ao limpar dados do navegador, reinstalá-lo, trocar de perfil ou perder o dispositivo. Exporte backups e guarde-os em local protegido.
+- Os backups JSON contêm dados pessoais, fotos e assinaturas sem criptografia.
+- A assinatura é uma imagem desenhada na tela; isso, por si só, não valida identidade nem garante validade jurídica.
+- Revise a prévia do PDF e ajuste papel/orientação conforme a impressora. Este protótipo deve ser avaliado pela profissional responsável antes do uso clínico rotineiro.
